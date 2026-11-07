@@ -1,0 +1,20 @@
+# dsh-workspace-sort bundle layer.
+#
+# Inserts the workspace sorter into the running plugin tree. The sorter keeps
+# the durable Workspace display order equal to:
+#
+#   1. workspaces that contain a running Session, sorted by workspace title;
+#   2. every other workspace, by that workspace's most recent Session activity
+#      (newest first), then by title.
+#
+# It only moves whole workspaces (`workspaceRegistry.insertBefore`); the
+# Session order inside a workspace is never touched.
+#
+# `enabled` turns the sorter off without uninstalling it. `debounceMs` is the
+# quiet period between an activity change and the reorder pass.
+- insert:
+    - id: workspace-sort
+      name: dsh-workspace-sort
+      config:
+        enabled: true
+        debounceMs: 350

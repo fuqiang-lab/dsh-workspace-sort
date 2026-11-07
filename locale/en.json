@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workspace sort",
+    "description": "Orders workspaces by their latest session activity, keeps workspaces with a running session on top, and sorts those by workspace name."
+  }
+}
